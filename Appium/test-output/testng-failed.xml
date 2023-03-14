@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="NicoPrasetiawan.Appium.TestCase3">
+        <methods>
+          <include name="startExecution"/>
+          <include name="scrollPage"/>
+          <include name="stopExecution"/>
+        </methods>
+      </class> <!-- NicoPrasetiawan.Appium.TestCase3 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
