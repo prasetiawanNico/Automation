@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
 
-public class TestCase4 extends BaseTest{
+public class TestCase4_swipe extends BaseTest{
 	
 	
 	@Test

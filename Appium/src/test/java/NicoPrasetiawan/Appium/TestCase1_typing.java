@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
 
-public class TestCase extends BaseTest{
+public class TestCase1_typing extends BaseTest{
 	
 	@Test
 	public void settingWifiName() throws InterruptedException {

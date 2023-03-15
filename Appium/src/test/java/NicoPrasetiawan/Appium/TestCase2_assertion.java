@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
 
-public class TestCase2 extends BaseTest{
+public class TestCase2_assertion extends BaseTest{
 	
 	@Test
 	public void longPress() {

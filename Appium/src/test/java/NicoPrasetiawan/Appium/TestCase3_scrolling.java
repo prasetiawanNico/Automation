@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
 
-public class TestCase3 extends BaseTest{
+public class TestCase3_scrolling extends BaseTest{
 	
 	@Test
 	public void scrollPage() throws MalformedURLException, InterruptedException{

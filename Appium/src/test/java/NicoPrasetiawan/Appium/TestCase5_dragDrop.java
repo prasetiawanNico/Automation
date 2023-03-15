@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
 
-public class TestCase5 extends BaseTest{
+public class TestCase5_dragDrop extends BaseTest{
 	
 	@Test
 	public void dragAndDrop() throws InterruptedException {
