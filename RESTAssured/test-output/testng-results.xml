@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-16T17:15:02 WIB" name="Default suite" finished-at="2023-03-16T17:15:03 WIB" duration-ms="1420">
+  <suite started-at="2023-03-17T15:09:07 WIB" name="Default suite" finished-at="2023-03-17T15:09:14 WIB" duration-ms="7249">
     <groups>
     </groups>
-    <test started-at="2023-03-16T17:15:02 WIB" name="Default test" finished-at="2023-03-16T17:15:03 WIB" duration-ms="1420">
-      <class name="apiTest.PutPatchDelete">
-        <test-method signature="testDelete()[pri:0, instance:apiTest.PutPatchDelete@28f3b248]" started-at="2023-03-16T17:15:02 WIB" name="testDelete" finished-at="2023-03-16T17:15:03 WIB" duration-ms="1391" status="PASS">
+    <test started-at="2023-03-17T15:09:07 WIB" name="Default test" finished-at="2023-03-17T15:09:14 WIB" duration-ms="7249">
+      <class name="apiTest.TopUp">
+        <test-method signature="BCA()[pri:0, instance:apiTest.TopUp@429bffaa]" started-at="2023-03-17T15:09:07 WIB" name="BCA" finished-at="2023-03-17T15:09:14 WIB" duration-ms="7219" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDelete -->
-      </class> <!-- apiTest.PutPatchDelete -->
+        </test-method> <!-- BCA -->
+      </class> <!-- apiTest.TopUp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
