@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-20T16:07:39 WIB" name="Default suite" finished-at="2023-03-20T16:08:16 WIB" duration-ms="37040">
+  <suite started-at="2023-03-21T16:24:24 WIB" name="Default suite" finished-at="2023-03-21T16:25:11 WIB" duration-ms="46546">
     <groups>
     </groups>
-    <test started-at="2023-03-20T16:07:39 WIB" name="Default test" finished-at="2023-03-20T16:08:16 WIB" duration-ms="37040">
-      <class name="apkDemo.TestCase_1">
-        <test-method is-config="true" signature="startExecution()[pri:0, instance:apkDemo.TestCase_1@54bff557]" started-at="2023-03-20T16:07:39 WIB" name="startExecution" finished-at="2023-03-20T16:08:03 WIB" duration-ms="24096" status="PASS">
+    <test started-at="2023-03-21T16:24:24 WIB" name="Default test" finished-at="2023-03-21T16:25:11 WIB" duration-ms="46546">
+      <class name="apkDemo.TestCase_2">
+        <test-method is-config="true" signature="startExecution()[pri:0, instance:apkDemo.TestCase_2@5a56cdac]" started-at="2023-03-21T16:24:24 WIB" name="startExecution" finished-at="2023-03-21T16:24:44 WIB" duration-ms="20419" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExecution -->
-        <test-method signature="fillForm()[pri:0, instance:apkDemo.TestCase_1@54bff557]" started-at="2023-03-20T16:08:03 WIB" name="fillForm" finished-at="2023-03-20T16:08:15 WIB" duration-ms="12306" status="PASS">
+        <test-method signature="scroll()[pri:0, instance:apkDemo.TestCase_2@5a56cdac]" started-at="2023-03-21T16:24:44 WIB" name="scroll" finished-at="2023-03-21T16:25:10 WIB" duration-ms="26050" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fillForm -->
-        <test-method is-config="true" signature="stopExecution()[pri:0, instance:apkDemo.TestCase_1@54bff557]" started-at="2023-03-20T16:08:15 WIB" name="stopExecution" finished-at="2023-03-20T16:08:16 WIB" duration-ms="606" status="PASS">
+        </test-method> <!-- scroll -->
+        <test-method is-config="true" signature="stopExecution()[pri:0, instance:apkDemo.TestCase_2@5a56cdac]" started-at="2023-03-21T16:25:10 WIB" name="stopExecution" finished-at="2023-03-21T16:25:11 WIB" duration-ms="53" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopExecution -->
-      </class> <!-- apkDemo.TestCase_1 -->
+      </class> <!-- apkDemo.TestCase_2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

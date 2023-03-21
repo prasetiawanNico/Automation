@@ -88,7 +88,7 @@ public class BaseTest {
 	
 	@AfterClass
 	public void stopExecution() {
-		driver.quit();
+		//driver.quit();
 		service.stop();
 	}
 	
