@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-15T15:35:48 WIB" name="Default suite" finished-at="2023-03-15T15:36:21 WIB" duration-ms="33411">
+  <suite started-at="2023-03-20T16:07:39 WIB" name="Default suite" finished-at="2023-03-20T16:08:16 WIB" duration-ms="37040">
     <groups>
     </groups>
-    <test started-at="2023-03-15T15:35:48 WIB" name="Default test" finished-at="2023-03-15T15:36:21 WIB" duration-ms="33411">
-      <class name="NicoPrasetiawan.Appium.TestCase7_jumpToSpecificPage">
-        <test-method is-config="true" signature="startExecution()[pri:0, instance:NicoPrasetiawan.Appium.TestCase7_jumpToSpecificPage@43dac38f]" started-at="2023-03-15T15:35:48 WIB" name="startExecution" finished-at="2023-03-15T15:36:14 WIB" duration-ms="26496" status="PASS">
+    <test started-at="2023-03-20T16:07:39 WIB" name="Default test" finished-at="2023-03-20T16:08:16 WIB" duration-ms="37040">
+      <class name="apkDemo.TestCase_1">
+        <test-method is-config="true" signature="startExecution()[pri:0, instance:apkDemo.TestCase_1@54bff557]" started-at="2023-03-20T16:07:39 WIB" name="startExecution" finished-at="2023-03-20T16:08:03 WIB" duration-ms="24096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExecution -->
-        <test-method signature="jumpToSpecificPage()[pri:0, instance:NicoPrasetiawan.Appium.TestCase7_jumpToSpecificPage@43dac38f]" started-at="2023-03-15T15:36:14 WIB" name="jumpToSpecificPage" finished-at="2023-03-15T15:36:21 WIB" duration-ms="6764" status="PASS">
+        <test-method signature="fillForm()[pri:0, instance:apkDemo.TestCase_1@54bff557]" started-at="2023-03-20T16:08:03 WIB" name="fillForm" finished-at="2023-03-20T16:08:15 WIB" duration-ms="12306" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jumpToSpecificPage -->
-        <test-method is-config="true" signature="stopExecution()[pri:0, instance:NicoPrasetiawan.Appium.TestCase7_jumpToSpecificPage@43dac38f]" started-at="2023-03-15T15:36:21 WIB" name="stopExecution" finished-at="2023-03-15T15:36:21 WIB" duration-ms="120" status="PASS">
+        </test-method> <!-- fillForm -->
+        <test-method is-config="true" signature="stopExecution()[pri:0, instance:apkDemo.TestCase_1@54bff557]" started-at="2023-03-20T16:08:15 WIB" name="stopExecution" finished-at="2023-03-20T16:08:16 WIB" duration-ms="606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopExecution -->
-      </class> <!-- NicoPrasetiawan.Appium.TestCase7_jumpToSpecificPage -->
+      </class> <!-- apkDemo.TestCase_1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
