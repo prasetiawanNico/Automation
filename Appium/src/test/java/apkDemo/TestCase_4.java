@@ -38,6 +38,6 @@ public class TestCase_4 extends BaseTest {
 		//com.androidsample.generalstore:id/productPrice" - product price
 		//com.androidsample.generalstore:id/totalAmountLbl - totalSum
 		
-
+		System.out.println("test");
 	}
 }
