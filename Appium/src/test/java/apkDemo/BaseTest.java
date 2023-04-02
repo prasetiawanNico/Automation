@@ -37,6 +37,7 @@ public class BaseTest {
 		
 		UiAutomator2Options caps = new UiAutomator2Options();
 		caps.setDeviceName("Pixel4");
+		caps.setChromedriverExecutable("/Users/nicoprasetiawan/Documents/drivers/chromedriver/chromedriver91");
 		//caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\General-Store.apk");
 		caps.setApp("/Users/nicoprasetiawan/Documents/Eclipse-workspace/GitStuffPersonal/Automation/Appium/src/test/java/resources/General-Store.apk");
 		
@@ -85,6 +86,12 @@ public class BaseTest {
 			    "endX", endX,
 			    "endY", endY
 			));
+	}
+	
+	
+	public double getFormatedAmount(String amount, int startingChar) {
+		Double price = Double.parseDouble(amount.substring(startingChar));
+		return price;
 	}
 	
 	

@@ -2,8 +2,10 @@ package apkDemo;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,13 +13,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class TestCase_3 extends BaseTest {
 	
-	public double getFormatedAmount(String amount, int startingChar) {
-		Double price = Double.parseDouble(amount.substring(startingChar));
-		return price;
-	}
 	
 	@Test
 	public void sumPrice() throws InterruptedException {
@@ -59,6 +59,31 @@ public class TestCase_3 extends BaseTest {
 		
 		Assert.assertEquals(totalSum, formatedSum);
 		
+		WebElement element = driver.findElement(By.id("com.androidsample.generalstore:id/termsButton"));
+		longPress(element);
+		
+		driver.findElement(By.id("android:id/button1")).click();
+		
+		driver.findElement(AppiumBy.className("android.widget.CheckBox")).click();
+		
+		driver.findElement(By.id("com.androidsample.generalstore:id/btnProceed")).click();
+		
+		Thread.sleep(8000);
+		
+		
+		Set <String> contexts = driver.getContextHandles();
+		for (String contextName :contexts) {
+			System.out.println(contextName);
+		}
+		
+		// switch the context to webview
+		driver.context("WEBVIEW_com.androidsample.generalstore");
+		driver.findElement(By.name("q")).sendKeys("Automation test");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		driver.pressKey(new KeyEvent(AndroidKey.BACK));
+		
+		// switch back to native
+		driver.context("NATIVE_APP");
 		
 	}
 }
