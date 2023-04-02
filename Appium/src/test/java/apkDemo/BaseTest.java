@@ -27,7 +27,8 @@ public class BaseTest {
 	// Start Appium server
 	public void startExecution() throws MalformedURLException {
 		service = new AppiumServiceBuilder()
-				.withAppiumJS(new File("C:\\Users\\GPay-User\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				//.withAppiumJS(new File("C:\\Users\\GPay-User\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
 				.withIPAddress("127.0.0.1")
 				.usingPort(4723)
 				.build();
@@ -35,8 +36,10 @@ public class BaseTest {
 	
 		
 		UiAutomator2Options caps = new UiAutomator2Options();
-		caps.setDeviceName("Pixel_6_Pro");
-		caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\General-Store.apk");
+		caps.setDeviceName("Pixel4");
+		//caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\General-Store.apk");
+		caps.setApp("/Users/nicoprasetiawan/Documents/Eclipse-workspace/GitStuffPersonal/Automation/Appium/src/test/java/resources/General-Store.apk");
+		
 		//caps.setCapability("autoGrantPermissions", "true");
 		
 		
@@ -88,7 +91,7 @@ public class BaseTest {
 	
 	@AfterClass
 	public void stopExecution() {
-		//driver.quit();
+		driver.quit();
 		service.stop();
 	}
 	
