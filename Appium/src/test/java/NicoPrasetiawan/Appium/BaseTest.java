@@ -35,8 +35,8 @@ public class BaseTest {
 	
 		
 		UiAutomator2Options caps = new UiAutomator2Options();
-		//caps.setDeviceName("Pixel_6_Pro");
-		caps.setDeviceName("Android Device"); //executed on real / plugged device
+		caps.setDeviceName("Pixel_6_Pro");
+		//caps.setDeviceName("Android Device"); //executed on real / plugged device
 		caps.setApp("D:\\Project\\Eclipse\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk");
 		//caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\gaja_emoney_1.7.4_dev.apk");
 		caps.setCapability("autoGrantPermissions", "true");
