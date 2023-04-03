@@ -27,8 +27,8 @@ public class BaseTest {
 	// Start Appium server
 	public void startExecution() throws MalformedURLException {
 		service = new AppiumServiceBuilder()
-				//.withAppiumJS(new File("C:\\Users\\GPay-User\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
+				.withAppiumJS(new File("C:\\Users\\GPay-User\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				//.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
 				.withIPAddress("127.0.0.1")
 				.usingPort(4723)
 				.build();
@@ -36,12 +36,12 @@ public class BaseTest {
 	
 		
 		UiAutomator2Options caps = new UiAutomator2Options();
-		caps.setDeviceName("Pixel4"); //executed on emulator
+		caps.setDeviceName("Pixel_6_Pro"); //executed on emulator
 		//caps.setDeviceName("Android Device"); //executed on real / plugged device
 		
-		caps.setChromedriverExecutable("/Users/nicoprasetiawan/Documents/drivers/chromedriver/chromedriver91");
-		//caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\General-Store.apk");
-		caps.setApp("/Users/nicoprasetiawan/Documents/Eclipse-workspace/GitStuffPersonal/Automation/Appium/src/test/java/resources/General-Store.apk");
+		//caps.setChromedriverExecutable("/Users/nicoprasetiawan/Documents/drivers/chromedriver/chromedriver91");
+		caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\General-Store.apk");
+		//caps.setApp("/Users/nicoprasetiawan/Documents/Eclipse-workspace/GitStuffPersonal/Automation/Appium/src/test/java/resources/General-Store.apk");
 		
 		//caps.setCapability("autoGrantPermissions", "true");
 		

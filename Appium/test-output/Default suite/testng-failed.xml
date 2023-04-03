@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="NicoPrasetiawan.Appium.TestCase1_typing">
+      <class name="apkDemo.TestCase_3">
         <methods>
-          <include name="settingWifiName"/>
+          <include name="sumPrice"/>
           <include name="startExecution"/>
           <include name="stopExecution"/>
         </methods>
-      </class> <!-- NicoPrasetiawan.Appium.TestCase1_typing -->
+      </class> <!-- apkDemo.TestCase_3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
