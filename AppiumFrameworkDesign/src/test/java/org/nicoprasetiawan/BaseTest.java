@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
+import org.nicoprasetiawan.pageObjects.android.FormPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -22,6 +23,7 @@ public class BaseTest {
 	
 	public AndroidDriver driver;
 	public AppiumDriverLocalService service;
+	public FormPage formPage;
 	
 	@BeforeClass
 	// Start Appium server
@@ -50,54 +52,11 @@ public class BaseTest {
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	}
-	
-	
-	public void longPress(WebElement element) {
-		((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
-				ImmutableMap.of("elementId", ((RemoteWebElement)element).getId(),
-						"duration", 2000));
-	}
-	
-	
-	public void scrollToEndAction() {
-		boolean canScrollMore;
 		
-		do {
-		canScrollMore = (Boolean) ((JavascriptExecutor) driver).
-				executeScript("mobile: scrollGesture", ImmutableMap.of(
-						"left", 100, "top", 100, "width", 200, "height", 200,
-						"direction", "down",
-						"percent", 3.0
-			));
-		} while (canScrollMore);
+		formPage = new FormPage(driver);
 	}
 	
-	
-	public void swipeAction(WebElement element, String direction) {
-		((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
-			    "elementId", ((RemoteWebElement)element).getId(),
-			    "direction", direction,
-			    "percent", 0.75
-			));
-	}
-	
-	
-	public void dragDropActionn(WebElement source, int endX, int endY) {
-		((JavascriptExecutor) driver).executeScript("mobile: dragGesture", ImmutableMap.of(
-			    "elementId", ((RemoteWebElement) source).getId(),
-			    "endX", endX,
-			    "endY", endY
-			));
-	}
-	
-	
-	public double getFormatedAmount(String amount, int startingChar) {
-		Double price = Double.parseDouble(amount.substring(startingChar));
-		return price;
-	}
-	
-	
+		
 	
 	@AfterClass
 	public void stopExecution() {
