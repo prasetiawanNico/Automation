@@ -39,7 +39,8 @@ public class BaseTest {
 		caps.setDeviceName("Pixel_6_Pro"); //executed on emulator
 		//caps.setDeviceName("Android Device"); //executed on real / plugged device
 		
-		caps.setChromedriverExecutable("/Users/nicoprasetiawan/Documents/drivers/chromedriver/chromedriver91");
+		//caps.setChromedriverExecutable("/Users/nicoprasetiawan/Documents/drivers/chromedriver/chromedriver91");
+		caps.setChromedriverExecutable("D:\\Driver\\chromedriver.exe");
 		caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\General-Store.apk");
 		//caps.setApp("/Users/nicoprasetiawan/Documents/Eclipse-workspace/GitStuffPersonal/Automation/Appium/src/test/java/resources/General-Store.apk");
 		
