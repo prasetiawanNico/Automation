@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-04T09:34:57 WIB" name="Default suite" finished-at="2023-04-04T09:35:51 WIB" duration-ms="54496">
+  <suite started-at="2023-04-04T09:55:08 WIB" name="Default suite" finished-at="2023-04-04T09:56:17 WIB" duration-ms="69230">
     <groups>
     </groups>
-    <test started-at="2023-04-04T09:34:57 WIB" name="Default test" finished-at="2023-04-04T09:35:51 WIB" duration-ms="54496">
+    <test started-at="2023-04-04T09:55:08 WIB" name="Default test" finished-at="2023-04-04T09:56:17 WIB" duration-ms="69230">
       <class name="apkDemo.TestCase_3">
-        <test-method is-config="true" signature="startExecution()[pri:0, instance:apkDemo.TestCase_3@7c711375]" started-at="2023-04-04T09:34:57 WIB" name="startExecution" finished-at="2023-04-04T09:35:14 WIB" duration-ms="17654" status="PASS">
+        <test-method is-config="true" signature="startExecution()[pri:0, instance:apkDemo.TestCase_3@7c711375]" started-at="2023-04-04T09:55:08 WIB" name="startExecution" finished-at="2023-04-04T09:55:31 WIB" duration-ms="22909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExecution -->
-        <test-method signature="sumPrice()[pri:0, instance:apkDemo.TestCase_3@7c711375]" started-at="2023-04-04T09:35:14 WIB" name="sumPrice" finished-at="2023-04-04T09:35:51 WIB" duration-ms="36252" status="PASS">
+        <test-method signature="sumPrice()[pri:0, instance:apkDemo.TestCase_3@7c711375]" started-at="2023-04-04T09:55:31 WIB" name="sumPrice" finished-at="2023-04-04T09:56:16 WIB" duration-ms="45291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sumPrice -->
-        <test-method is-config="true" signature="stopExecution()[pri:0, instance:apkDemo.TestCase_3@7c711375]" started-at="2023-04-04T09:35:51 WIB" name="stopExecution" finished-at="2023-04-04T09:35:51 WIB" duration-ms="570" status="PASS">
+        <test-method is-config="true" signature="stopExecution()[pri:0, instance:apkDemo.TestCase_3@7c711375]" started-at="2023-04-04T09:56:16 WIB" name="stopExecution" finished-at="2023-04-04T09:56:17 WIB" duration-ms="1003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopExecution -->
