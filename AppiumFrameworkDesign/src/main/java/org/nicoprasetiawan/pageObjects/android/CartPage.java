@@ -40,7 +40,14 @@ public class CartPage extends AndroidActions{
 	@AndroidFindBy(id = "com.androidsample.generalstore:id/btnProceed")
 	private WebElement proceed;
 	
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/toolbar_title")
+	private WebElement toolbatTitle;
 	
+	
+	
+	public void waitForElement(String attribute, String value) {
+		waitForElementToAppear(toolbatTitle, attribute, value);
+	}
 	
 	public List<WebElement> getProductList() {
 		return productList;
@@ -63,7 +70,7 @@ public class CartPage extends AndroidActions{
 		return getFormatedAmount(totalAmount.getText(), 1);
 	}
 	
-	public void acceptTermsConditions() {
+	public void acceptTerms() {
 		longPress(terms);
 		acceptButton.click();
 	}
@@ -72,5 +79,6 @@ public class CartPage extends AndroidActions{
 		checkBox.click();
 		proceed.click();
 	}
+
 
 }
