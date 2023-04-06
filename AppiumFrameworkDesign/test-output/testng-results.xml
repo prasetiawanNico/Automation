@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-05T16:20:17 WIB" name="Default suite" finished-at="2023-04-05T16:20:54 WIB" duration-ms="36957">
+  <suite started-at="2023-04-06T10:13:44 WIB" name="Default suite" finished-at="2023-04-06T10:14:28 WIB" duration-ms="43308">
     <groups>
     </groups>
-    <test started-at="2023-04-05T16:20:17 WIB" name="Default test" finished-at="2023-04-05T16:20:54 WIB" duration-ms="36957">
+    <test started-at="2023-04-06T10:13:44 WIB" name="Default test" finished-at="2023-04-06T10:14:28 WIB" duration-ms="43308">
       <class name="org.nicoprasetiawan.TestCase">
-        <test-method is-config="true" signature="startExecution()[pri:0, instance:org.nicoprasetiawan.TestCase@6340e5f0]" started-at="2023-04-05T16:20:17 WIB" name="startExecution" finished-at="2023-04-05T16:20:33 WIB" duration-ms="15984" status="PASS">
+        <test-method is-config="true" signature="startExecution()[pri:0, instance:org.nicoprasetiawan.TestCase@6340e5f0]" started-at="2023-04-06T10:13:44 WIB" name="startExecution" finished-at="2023-04-06T10:14:06 WIB" duration-ms="21877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExecution -->
-        <test-method signature="sumPrice()[pri:0, instance:org.nicoprasetiawan.TestCase@6340e5f0]" started-at="2023-04-05T16:20:33 WIB" name="sumPrice" finished-at="2023-04-05T16:20:54 WIB" duration-ms="20564" status="PASS">
+        <test-method signature="sumPrice()[pri:0, instance:org.nicoprasetiawan.TestCase@6340e5f0]" started-at="2023-04-06T10:14:06 WIB" name="sumPrice" finished-at="2023-04-06T10:14:27 WIB" duration-ms="20707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sumPrice -->
-        <test-method is-config="true" signature="stopExecution()[pri:0, instance:org.nicoprasetiawan.TestCase@6340e5f0]" started-at="2023-04-05T16:20:54 WIB" name="stopExecution" finished-at="2023-04-05T16:20:54 WIB" duration-ms="384" status="PASS">
+        <test-method is-config="true" signature="stopExecution()[pri:0, instance:org.nicoprasetiawan.TestCase@6340e5f0]" started-at="2023-04-06T10:14:27 WIB" name="stopExecution" finished-at="2023-04-06T10:14:28 WIB" duration-ms="681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopExecution -->
