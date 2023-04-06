@@ -5,7 +5,7 @@ import org.nicoprasetiawan.pageObjects.android.ProductCatalogue;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestCase extends BaseTest {
+public class TestCase extends AndroidBaseTest {
 	
 	
 	@Test
