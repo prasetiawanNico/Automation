@@ -1,7 +1,10 @@
 package org.nicoprasetiawan;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.nicoprasetiawan.pageObjects.android.CartPage;
 import org.nicoprasetiawan.pageObjects.android.ProductCatalogue;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,7 +15,7 @@ public class TestCase extends AndroidBaseTest {
 	public void sumPrice() throws InterruptedException {
 		
 		//FormPage formPage = new FormPage(driver);
-		formPage.setNameField("Nico");
+		formPage.setNameField("TestCase");
 		formPage.setGender("female");
 		formPage.setCountrySelection("Bahrain");
 		ProductCatalogue productCatalogue = formPage.submitForm();
@@ -27,12 +30,10 @@ public class TestCase extends AndroidBaseTest {
 		double totalSum = cartPage.getProductSum();
 		double TotalAmountDisplayed = cartPage.getTotalAmountDisplayed();
 		
-		Assert.assertEquals(totalSum, TotalAmountDisplayed);
+		AssertJUnit.assertEquals(totalSum, TotalAmountDisplayed);
 		
 		cartPage.acceptTerms();
-		cartPage.submitOrder();
-		
-		
-		
+		cartPage.submitOrder();	
 	}
+	
 }
