@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.nicoprasetiawan.TestCase_1">
+      <class name="org.nicoprasetiawan.TestCase">
         <methods>
-          <include name="fillForm_Positive"/>
+          <include name="sumPrice" invocation-numbers="1"/>
           <include name="stopExecution"/>
           <include name="startExecution"/>
         </methods>
-      </class> <!-- org.nicoprasetiawan.TestCase_1 -->
+      </class> <!-- org.nicoprasetiawan.TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
