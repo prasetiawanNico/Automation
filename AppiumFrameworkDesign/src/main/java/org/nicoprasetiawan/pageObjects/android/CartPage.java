@@ -46,7 +46,7 @@ public class CartPage extends AndroidActions{
 	
 	
 	public void waitForElement(String attribute, String value) {
-		waitForElementToAppear(toolbatTitle, attribute, value);
+		waitForElementToAppear(toolbatTitle, attribute, value, driver);
 	}
 	
 	public List<WebElement> getProductList() {

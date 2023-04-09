@@ -4,30 +4,31 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.android.Activity;
-
 import org.testng.AssertJUnit;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+
 import org.nicoprasetiawan.pageObjects.android.CartPage;
 import org.nicoprasetiawan.pageObjects.android.ProductCatalogue;
-import org.openqa.selenium.By;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class TestCase extends AndroidBaseTest {
 	
 	@BeforeMethod
 	public void setHomePage() {
-		formPage.setActivity();
+		formPage.setActivityToHomepage();
 	}
 	
 	
 	@Test(dataProvider = "getData")
-	public void sumPrice(String name, String gender, String country) throws InterruptedException {
-		
+//	public void sumPrice(String name, String gender, String country) throws InterruptedException 
+	public void sumPrice(HashMap<String, String> input) throws InterruptedException
+	{
 		//FormPage formPage = new FormPage(driver);
-		formPage.setNameField(name);
-		formPage.setGender(gender);
-		formPage.setCountrySelection(country);
+		formPage.setNameField(input.get("name"));
+		formPage.setGender(input.get("gender"));
+		formPage.setCountrySelection(input.get("country"));
 		ProductCatalogue productCatalogue = formPage.submitForm();
 		productCatalogue.addItemToCartByIndex(0);
 		productCatalogue.addItemToCartByIndex(0);
@@ -50,11 +51,20 @@ public class TestCase extends AndroidBaseTest {
 	
 	
 	@DataProvider
-	public Object[][] getData() {
+	public Object[][] getData() throws IOException {
+		
+		List<HashMap<String, String>> data = getJasonData(System.getProperty("user.dir")+"//src//test//java//org//nicoprasetiawan//testData//eCommerce.json");
+		
+//		return new Object[][] {
+//			{"Sandra", "female", "Bahrain"},
+//			{"Nico", "male", "Argentina"}
+//		};
+		
 		return new Object[][] {
-			{"Sandra", "female", "Bahrain"},
-			{"Nico", "male", "Argentina"}
+			{data.get(0)},
+			{data.get(1)}
 		};
+		
 	}
 	
 	

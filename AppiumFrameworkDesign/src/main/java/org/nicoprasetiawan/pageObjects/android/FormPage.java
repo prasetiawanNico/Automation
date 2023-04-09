@@ -38,7 +38,7 @@ public class FormPage extends AndroidActions {
 	WebElement shopButton;
 	
 	
-	public void setActivity() {
+	public void setActivityToHomepage() {
 		Activity activity = new Activity("com.androidsample.generalstore", "com.androidsample.generalstore.MainActivity");
 		driver.startActivity(activity);
 	}
