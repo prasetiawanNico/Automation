@@ -12,6 +12,7 @@ import java.util.List;
 
 import org.nicoprasetiawan.pageObjects.android.CartPage;
 import org.nicoprasetiawan.pageObjects.android.ProductCatalogue;
+import org.nicoprasetiawan.testUtils.AndroidBaseTest;
 
 public class TestCase extends AndroidBaseTest {
 	

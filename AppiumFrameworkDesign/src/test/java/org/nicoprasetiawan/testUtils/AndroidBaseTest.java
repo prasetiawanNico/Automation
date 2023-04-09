@@ -1,9 +1,9 @@
-package org.nicoprasetiawan;
+package org.nicoprasetiawan.testUtils;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.nicoprasetiawan.pageObjects.android.FormPage;
 import org.nicoprasetiawan.utils.AppiumUtils;
@@ -13,7 +13,6 @@ import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class AndroidBaseTest extends AppiumUtils{
 	
@@ -23,18 +22,19 @@ public class AndroidBaseTest extends AppiumUtils{
 	
 	@BeforeClass
 	// Start Appium server
-	public void startExecution() throws MalformedURLException {
-		service = new AppiumServiceBuilder()
-				//.withAppiumJS(new File("C:\\Users\\GPay-User\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
-				.withIPAddress("127.0.0.1")
-				.usingPort(4723)
-				.build();
-		service.start();
+	public void startExecution() throws IOException {
+
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//java//org//nicoprasetiawan//resources//data.properties");
+		prop.load(fis);
+		String ipAddress = prop.getProperty("ipAddress");
+		String port = prop.getProperty("port");
+		
+		service = startAppiumServer(ipAddress, Integer.parseInt(port));
 	
 		
 		UiAutomator2Options caps = new UiAutomator2Options();
-		caps.setDeviceName("Pixel4"); //executed on emulator
+		caps.setDeviceName(prop.getProperty("androidDeviceName")); //executed on emulator
 		//caps.setDeviceName("Android Device"); //executed on real / plugged device
 		
 		//caps.setChromedriverExecutable("/Users/nicoprasetiawan/Documents/drivers/chromedriver/chromedriver91");
@@ -42,13 +42,13 @@ public class AndroidBaseTest extends AppiumUtils{
 		caps.setChromedriverExecutable(System.getProperty("user.dir")+"//src//test//java//driver//chromedriver91_IOS");
 		//caps.setApp("D:\\GitStuff\\Appium\\src\\test\\java\\resources\\General-Store.apk");
 		//caps.setApp("/Users/nicoprasetiawan/Documents/Eclipse-workspace/GitStuffPersonal/Automation/Appium/src/test/java/resources/General-Store.apk");
-		caps.setApp(System.getProperty("user.dir")+"//src//test//java//resources//General-Store.apk");
+		caps.setApp(System.getProperty("user.dir")+"//src//test//java//org//nicoprasetiawan//resources//General-Store.apk");
 		
 		//caps.setCapability("autoGrantPermissions", "true");
 		
 		
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);
-		
+		//driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);
+		driver = new AndroidDriver(service.getUrl(), caps);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		formPage = new FormPage(driver);

@@ -5,7 +5,7 @@
     <classes>
       <class name="org.nicoprasetiawan.TestCase">
         <methods>
-          <include name="sumPrice" invocation-numbers="0 1"/>
+          <include name="sumPrice"/>
           <include name="stopExecution"/>
           <include name="startExecution"/>
           <include name="setHomePage"/>

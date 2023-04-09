@@ -16,14 +16,29 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class AppiumUtils {
+	
+	public AppiumDriverLocalService service;
 	
 //	AppiumDriver driver;
 //	
 //	public AppiumUtils(AppiumDriver driver) {
 //		this.driver = driver;
 //	}
+	
+	public AppiumDriverLocalService startAppiumServer(String ipAddress, int port) {
+		service = new AppiumServiceBuilder()
+				//.withAppiumJS(new File("C:\\Users\\GPay-User\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
+				.withIPAddress(ipAddress)
+				.usingPort(port)
+				.build();
+		service.start();
+		return service;
+	}
 	
 	public List<HashMap<String,String>> getJasonData(String jsonFilePath) throws IOException {
 		
