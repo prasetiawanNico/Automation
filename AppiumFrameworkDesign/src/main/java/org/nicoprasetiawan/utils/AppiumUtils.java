@@ -30,9 +30,13 @@ public class AppiumUtils {
 //	}
 	
 	public AppiumDriverLocalService startAppiumServer(String ipAddress, int port) {
+		
+		String windowsAppiumJS = "C:\\\\Users\\\\GPay-User\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\appium\\\\build\\\\lib\\\\main.js";
+		String macAppiumJS = "//usr//local//lib//node_modules//appium//build//lib//main.js";
+		
 		service = new AppiumServiceBuilder()
-				//.withAppiumJS(new File("C:\\Users\\GPay-User\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
+				.withAppiumJS(new File(windowsAppiumJS))
+				//.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
 				.withIPAddress(ipAddress)
 				.usingPort(port)
 				.build();
