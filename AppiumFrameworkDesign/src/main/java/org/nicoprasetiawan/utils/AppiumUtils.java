@@ -35,7 +35,7 @@ public class AppiumUtils {
 		String macAppiumJS = "//usr//local//lib//node_modules//appium//build//lib//main.js";
 		
 		service = new AppiumServiceBuilder()
-				.withAppiumJS(new File(windowsAppiumJS))
+				.withAppiumJS(new File(macAppiumJS))
 				//.withAppiumJS(new File ("//usr//local//lib//node_modules//appium//build//lib//main.js"))
 				.withIPAddress(ipAddress)
 				.usingPort(port)

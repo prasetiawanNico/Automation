@@ -5,8 +5,8 @@
     <classes>
       <class name="org.nicoprasetiawan.TestCase">
         <methods>
-          <include name="stopExecution"/>
           <include name="sumPrice"/>
+          <include name="stopExecution"/>
           <include name="startExecution"/>
           <include name="setHomePage"/>
         </methods>
