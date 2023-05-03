@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.nicoprasetiawan.TestCase">
+      <class name="org.nicoprasetiawan.ExtentReportsDemo">
         <methods>
-          <include name="sumPrice"/>
-          <include name="stopExecution"/>
-          <include name="startExecution"/>
-          <include name="setHomePage"/>
+          <include name="intialDemo"/>
         </methods>
-      </class> <!-- org.nicoprasetiawan.TestCase -->
+      </class> <!-- org.nicoprasetiawan.ExtentReportsDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

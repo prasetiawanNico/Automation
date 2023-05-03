@@ -1,8 +1,12 @@
 package org.nicoprasetiawan;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import org.testng.AssertJUnit;
 
@@ -16,16 +20,34 @@ import org.nicoprasetiawan.testUtils.AndroidBaseTest;
 
 public class TestCase extends AndroidBaseTest {
 	
+	ExtentReports extent;
+	
+	@BeforeTest
+	public void config() {
+		
+		String path = System.getProperty("user.dir") + "//reports//index.html";
+		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+		reporter.config().setReportName("Automation Result");
+		reporter.config().setDocumentTitle("Gaja App Automation");
+		
+		extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		extent.setSystemInfo("Tester", "Nico");
+		
+	}
+	
 	@BeforeMethod
 	public void setHomePage() {
 		formPage.setActivityToHomepage();
 	}
 	
-	
 	@Test(dataProvider = "getData")
 //	public void sumPrice(String name, String gender, String country) throws InterruptedException 
 	public void sumPrice(HashMap<String, String> input) throws InterruptedException
 	{
+		
+		extent.createTest("Extent reports demo");
+		
 		//FormPage formPage = new FormPage(driver);
 		formPage.setNameField(input.get("name"));
 		formPage.setGender(input.get("gender"));
@@ -48,6 +70,8 @@ public class TestCase extends AndroidBaseTest {
 		cartPage.submitOrder();
 		
 		Thread.sleep(3000);
+		
+		extent.flush();
 	}
 	
 	
